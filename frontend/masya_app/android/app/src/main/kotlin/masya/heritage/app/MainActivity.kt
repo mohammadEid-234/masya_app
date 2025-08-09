@@ -1,4 +1,4 @@
-package com.example.masya_app
+package masya.heritage.app
 
 import io.flutter.embedding.android.FlutterActivity
 

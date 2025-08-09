@@ -1,8 +1,10 @@
+import { type } from "express/lib/response";
 import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   fullName: { type: String },
   email: { type: String, unique: true, sparse: true }, // optional, sparse for multiple auth methods
-  phoneNumber: { type: String, unique: true, sparse: true },
+  username : {type : String , unique: true,sparse: true},
+  phoneNumber: { type: String, unique: true, required: true,},
   provider: {
     type: String, // 'google' | 'facebook' | 'local'
     default: 'local'
